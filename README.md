@@ -1,2 +1,35 @@
-# SMART-Visitor-Recognition-System
-This project focuses on creating a smart visitor recognition system that provides notifications to the owner through the Internet whenever a person comes at the door. When a person comes at the door, camera sensor captures his/her image and sends it to the ML face recognition module. It recognises the face of the user with any of the allowed members and matches the entry timing. Furthermore, we have also provided a time-based heuristic which allows entry only under desired timings. The advantage gained by choosing this system over similar current systems is that it provides automatic entry in case the person is recognised and is trying to enter within desired timings. In all other cases, the user receives a notification to allow/deny. The developed system provides accurate judgements under different test scenarios. The time bound entry heuristic makes it unique when compared with similar systems developed so far.
+## CONTENTS:<br>
+The folder contains 7 files and 2 folders: <br>
+### 1. Files <br>
+	1.1. constants.py <br>
+	1.2. data_prep.py <br>
+	1.3. prediction.py <br>
+	1.4. roles.json <br>
+	1.5. telegramnotification3.py <br>
+	1.6. trained_knn_model.clf <br>
+	1.7. training.py <br>
+	1.8. README.txt <br>
+2. Folders <br>
+ 	2.1. image dataset: The folders gets updated dynamically with the code <br>
+ 	2.2 analysis: Contains the required dataset and code used for face encoding and encoding classification analysis <br>
+	
+Required Packages: <br>
+* cv2 <br>
+* skimage <br>
+* face_recognition <br>
+* telegram-bot <br>
+* PIL <br>
+* seaborn, keras (These packages are only required for analysis. Main code can run without it) <br>
+
+
+# How to run the code: <br>
+### * Smart Visitor Recognition code: <br>
+   * Make sure you are in the source directory <br>
+   * Run prediction.py file to predict the person who comes to the door. <br>
+   * Run data_prep.py to register a new person to the system.<br>
+   
+### * Analysis Code: <br>
+   * Run knn_analysis.ipynb notebook to run the code for KNN classifier. <br>
+   * Run svm_analysis.ipynb notebook to run the analysis for the SVM classifier. <br>
+   * Run encoding_analysis.ipynb notebook the get analysis on encoding method comparison. <br>
+   * Train_test.py code is to be run to make a separate testing folder. This code only needs to run one time and has already been executed so no need to run again. <br>
